@@ -1,7 +1,7 @@
 
 using Refit;
 
-namespace TodoApi.Interfaces;
+namespace ApiCep.Interfaces;
 
 public interface IApiCep
 {

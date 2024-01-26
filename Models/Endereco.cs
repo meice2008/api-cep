@@ -1,9 +1,12 @@
 using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 
-namespace TodoApi;
+namespace ApiCep;
 
 public class Endereco
 {
+    [Key]
+    public string Id { get; set; } = Guid.NewGuid().ToString();
     [JsonProperty("cep")]
     public string? Cep { get; set; }
 

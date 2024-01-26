@@ -1,6 +1,8 @@
-using TodoApi.Interfaces;
+using ApiCep.Interfaces;
 using Refit;
-using TodoApi.Services;
+using ApiCep.Services;
+using ApiCep.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +15,15 @@ builder.Services.AddSwaggerGen();
 var apiBaseUrl = builder.Configuration["ServiceUrl:CepApiUrl"];
 
 builder.Services.AddRefitClient<IApiCep>().ConfigureHttpClient(c => c.BaseAddress = new Uri(apiBaseUrl));
+
 builder.Services.AddScoped<ICepService, CepService>();
+builder.Services.AddScoped<IEnderecoService, EnderecoService>();
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+
 
 
 var app = builder.Build();

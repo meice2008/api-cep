@@ -1,4 +1,4 @@
-﻿namespace TodoApi.Interfaces
+﻿namespace ApiCep.Interfaces
 {
     public interface ICepService
     {

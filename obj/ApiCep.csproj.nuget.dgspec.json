@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\meice\\source\\repos\\projetocep\\projeto-cep\\api-cep\\ApiCep.csproj": {}
+    "C:\\Users\\meice\\source\\repos\\ProjetoCep\\api-cep\\ApiCep.csproj": {}
   },
   "projects": {
-    "C:\\Users\\meice\\source\\repos\\projetocep\\projeto-cep\\api-cep\\ApiCep.csproj": {
+    "C:\\Users\\meice\\source\\repos\\ProjetoCep\\api-cep\\ApiCep.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\meice\\source\\repos\\projetocep\\projeto-cep\\api-cep\\ApiCep.csproj",
+        "projectUniqueName": "C:\\Users\\meice\\source\\repos\\ProjetoCep\\api-cep\\ApiCep.csproj",
         "projectName": "ApiCep",
-        "projectPath": "C:\\Users\\meice\\source\\repos\\projetocep\\projeto-cep\\api-cep\\ApiCep.csproj",
+        "projectPath": "C:\\Users\\meice\\source\\repos\\ProjetoCep\\api-cep\\ApiCep.csproj",
         "packagesPath": "C:\\Users\\meice\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\meice\\source\\repos\\projetocep\\projeto-cep\\api-cep\\obj\\",
+        "outputPath": "C:\\Users\\meice\\source\\repos\\ProjetoCep\\api-cep\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\meice\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,13 +40,29 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[7.0.13, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.4, )"
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.11, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

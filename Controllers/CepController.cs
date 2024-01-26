@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Refit;
-using TodoApi.Interfaces;
+using ApiCep.Interfaces;
 
-namespace TodoApi.Controllers;
+namespace ApiCep.Controllers;
 
 [ApiController]
 [Route("[controller]")]

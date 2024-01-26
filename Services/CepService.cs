@@ -1,12 +1,14 @@
-namespace TodoApi.Services;
+namespace ApiCep.Services;
 using Refit;
-using TodoApi.Interfaces;
+using ApiCep.Interfaces;
 public class CepService : ICepService
 {
     private readonly IConfiguration _configuration;
-    public CepService(IConfiguration configuration)
+    private readonly IEnderecoService _enderecoService;
+    public CepService(IConfiguration configuration, IEnderecoService enderecoService)
     {
         _configuration = configuration;
+        _enderecoService = enderecoService;
     }
 
     public Task<Endereco> GetEnderecoDoCep_v1(string cep)
@@ -16,6 +18,9 @@ public class CepService : ICepService
         var cepClient = RestService.For<IApiCep>(baseUrl);                        
 
         var result = cepClient.GetEnderecoAsync(cep);
+
+        _enderecoService.Post(result.Result);
+
 
         return result;
     }
